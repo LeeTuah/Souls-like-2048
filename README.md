@@ -44,6 +44,9 @@ pip install pynput sty pygame
 🎨 **Colorful grid with number tiles**  
 🎵 **ASCII intro animation with background music**   
 
+![Screenshot 1](screenshots/1.png)
+![Screenshot 2](screenshots/2.png)
+
 ## Contributors  
 
 💡 **LeeTuah**  
