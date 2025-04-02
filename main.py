@@ -149,7 +149,8 @@ def print_grid(game_over):
 
         time.sleep(3)
 
-def rotate_anti():
+def rotate_anti() -> None:
+    global grid
     rotated_grid = []
 
     for i in range(grid_size - 1, -1, -1):
@@ -160,9 +161,10 @@ def rotate_anti():
 
         rotated_grid.append(rotated_row)
 
-    return rotated_grid
+    grid = rotated_grid
 
-def rotate_clockwise():
+def rotate_clockwise() -> None:
+    global grid
     copy = []
     k = 0
 
@@ -174,9 +176,9 @@ def rotate_clockwise():
 
         k += 1
 
-    return copy
+    grid = copy
 
-def reflect():
+def reflect() -> None:
     global grid
     reflected_grid = []
 
@@ -187,7 +189,7 @@ def reflect():
             reflected_row.append(grid[i][j])
 
         reflected_grid.append(reflected_row)
-    return reflected_grid
+    grid = reflected_grid
 
 def move_right():
     for i in range(grid_size):
@@ -208,23 +210,23 @@ def move_right():
 def move_left():
     global grid
 
-    grid = reflect()
+    reflect()
     move_right()
-    grid = reflect()
+    reflect()
 
 def move_up():
     global grid
 
-    grid = rotate_clockwise()
+    rotate_clockwise()
     move_right()
-    grid = rotate_anti()
+    rotate_anti()
 
 def move_down():
     global grid
 
-    grid = rotate_anti()
+    rotate_anti()
     move_right()
-    grid = rotate_clockwise()
+    rotate_clockwise()
 
 def is_game_over():
     global game_won
