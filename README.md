@@ -39,7 +39,7 @@ pip install pynput sty pygame
 
 5. **Merge numbers** to reach the **target tile** (2048, 4096, or 8192 depending on difficulty).  
 
-##Screenshots
+## Screenshots
 
 🎨 **Colorful grid with number tiles**  
 🎵 **ASCII intro animation with background music**   
